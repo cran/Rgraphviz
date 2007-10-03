@@ -1,0 +1,48 @@
+====================
+Installing Rgraphviz
+====================
+
+Windows
+=======
+
+Install an Rgraphviz binary package in the usual way
+
+
+Source based installation
+=========================
+
+The Rgraphviz package depends on the Graphviz library which can be
+obtained from http://www.graphviz.org/.
+
+At present, Rgraphviz is known to work with Graphviz versions greater
+than or equal to 2.2 (note however that a bug in the neato layout
+routine makes it preferable not to use versions 2.4, 2.6 and 2.8)
+
+To install Graphviz:
+
+ 1. Download the source tarball from http://www.graphviz.org/
+ 2. Unpack the distribution (tar -xzvf)
+ 3. Read the Graphviz installation instructions.  Basically, you
+    should be able to do:
+
+      ./configure
+      make
+      make install
+
+A word of warning, especially on the Mac OS X platform: Rgraphviz may
+not work if Graphviz is compiled with optimization.
+
+For the most recent version of Graphviz, you will also need to make
+sure that pkg-config (http://pkgconfig.freedesktop.org/wiki/) is
+installed on your system.  If you install Graphviz to a non-standard
+location, you may need to set the PKG_CONFIG_PATH environment variable
+to tell pkg-config where the Graphviz metadata lives.  Here is an example:
+
+    export PKG_CONFIG_PATH=/home/me/graphviz/lib/pkgconfig
+
+At this point you should be able to install Rgraphviz either via R CMD
+INSTALL or by starting R and using install.packages.
+
+Note that older versions of Graphviz use a configure script called
+dotneato-config which must be in your PATH for Rgraphviz to find it.
+This is instead of the pkg-config setup.

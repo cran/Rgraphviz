@@ -1,0 +1,114 @@
+importFrom("graphics", "plot", "lines")
+
+import("methods")
+import("utils") # for the "head" generic
+                                                                                
+export(
+        agopen,			# Rgraphviz
+        agread,			# Rgraphviz
+        agwrite,		# Rgraphviz
+        buildEdgeList,		# Rgraphviz
+        buildNodeList,		# Rgraphviz
+        checkAttrs,		# defaultAttrs
+        drawAgNode,		# graph
+        drawTxtLabel,		# graph
+        getDefaultAttrs,	# defaultAttrs
+        getNodeLabels,		# Rgraphviz
+        getNodeNames,		# Rgraphviz
+        graphvizVersion,	# Rgraphviz
+        layoutGraph,		# Rgraphviz
+        makeNodeAttrs,		# own
+        pieGlyph,		# own
+        removedEdges,		# Rgraphviz
+
+	toFile,
+	agopenSimple
+	)
+
+exportClasses(			# Ragraph
+                "AgEdge",
+                "AgNode",
+                "AgTextLabel",
+                "BezierCurve",
+                "boundingBox",
+                "pEdge",	# plot, related to buildEdgeList only
+                "pNode",	# plot, related to buildNodeList only
+                "Ragraph",
+                "xyPoint"
+	)
+
+exportMethods(	
+		graphDataDefaults,
+      		"graphDataDefaults<-", 
+		graphData,
+      		"graphData<-", 
+
+		clusterData,
+      		"clusterData<-", 
+
+      		nodeDataDefaults, 
+		"nodeDataDefaults<-", 
+		nodeData,
+      		"nodeData<-",
+
+		edgeDataDefaults, 
+		"edgeDataDefaults<-",
+		edgeData, 
+		"edgeData<-", 
+
+		# Ragraph +
+                "AgEdge<-",
+                "AgEdge",
+                "AgNode<-",
+                "AgNode",
+                "agraph",
+                "arrowhead",
+                "arrowsize",
+                "arrowtail",
+                "bezierPoints",
+                "bLines",
+                "botLeft",
+                "boundBox",
+                "color",
+                "cPoints",
+                "edgemode",
+                "edgeNames",
+                "ep",
+                "fillcolor",
+                "from",			# plot only
+                "getNodeCenter",
+                "getNodeHeight",
+                "getNodeLW",
+                "getNodeRW",
+                "getNodeXY",
+                "getNodeXY",
+                "getPoints",
+                "getSpline",
+                "getX",
+                "getY",
+                "head",
+                "labelColor",
+                "labelFontsize",
+                "labelJust",
+                "labelLoc",
+                "labelText",
+                "labelWidth",
+                "laidout",
+                "layoutType",
+                "lines",
+                "name",			# plot
+                "numSplines",
+                "plot",			# graph only
+                "pointList",
+                "shape",
+                "show",
+                "sp",
+                "splines",
+                "style",
+                "tail",
+                "to",			# plot only
+                "toDot",		# graph only
+                "txtLabel",
+                "upRight"
+	)
+
